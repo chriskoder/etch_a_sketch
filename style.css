@@ -1,0 +1,43 @@
+body {
+    background-color: #2a2a2a;
+}
+.buttons {
+    padding-bottom: 1em;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    text-align: center;
+}
+.button-under {
+    padding-top: 1em;
+    grid-row-start: 4;
+    grid-column-start: 2;
+    text-align: center;
+}
+.button1, .button2, .button3 {
+    width: 160px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', 'sans-serif';
+    background: #5c5c5c;
+    font-size: 2em;
+    justify-self: center;
+}
+.button1 {
+    justify-self: end;
+}
+.button2 {
+    justify-self: start;
+}
+
+.header {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    grid-column-start: 2;
+    color: white;
+    font-style: italic;
+}
