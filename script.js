@@ -56,12 +56,12 @@ function randomColor() {
     r = Math.floor(Math.random() * 255);
     g = Math.floor(Math.random() * 255);
     b = Math.floor(Math.random() * 255);
-    str = 'rgb(' + r + ', ' + g + ', ' + b + ')'
+    str = 'rgb(' + r + ', ' + g + ', ' + b + ')';
     return str;
 }
 function resize() {
     container.innerHTML = '';
-    nsize = prompt('What should be the new size of the drawing are? (E.g type "32" for 32x32)')
+    nsize = prompt('What should be the new size of the drawing are? (E.g type "32" for 32x32)');
     if (nsize > 0 && nsize < 129) {
         draw(nsize);
     } else {
@@ -71,5 +71,5 @@ function resize() {
 }
 function clear() {
     container.innerHTML = '';
-    draw(nsize)
+    draw(nsize);
 }
