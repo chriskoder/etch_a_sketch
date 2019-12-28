@@ -56,8 +56,8 @@ function randomColor() {
     r = Math.floor(Math.random() * 255);
     g = Math.floor(Math.random() * 255);
     b = Math.floor(Math.random() * 255);
-    str = 'rgb(' + r + ', ' + g + ', ' + b + ')';
-    return str;
+    string = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    return string;
 }
 function resize() {
     container.innerHTML = '';
