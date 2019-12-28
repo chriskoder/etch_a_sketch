@@ -5,11 +5,12 @@ const randomButton = document.querySelector('.button2');
 const clearButton = document.querySelector('.button3');
 const boxWidth = 400; //the width of the drawing area is 400px
 let randomBrush;
-let size, nsize;
+let size, nsize, parsedNewSize;
 let init = (function() {
     randomBrush = false;
     const defSize = 16;
     nsize = defSize;
+    parsedNewSize = defSize;
     mainContainer.style.display = 'grid';
     mainContainer.style.gridTemplateColumns = '1fr 1fr 1fr';
     container.style.gridColumnStart = '2';
@@ -62,8 +63,9 @@ function randomColor() {
 function resize() {
     container.innerHTML = '';
     nsize = prompt('What should be the new size of the drawing are? (E.g type "32" for 32x32)');
-    if (nsize > 0 && nsize < 129) {
-        draw(nsize);
+    parsedNewSize = parseInt(nsize);
+    if (parsedNewSize > 0 && parsedNewSize < 129) {
+        draw(parsedNewSize);
     } else {
         alert('Please enter a num between 0 and 128');
         resize();
@@ -71,5 +73,5 @@ function resize() {
 }
 function clear() {
     container.innerHTML = '';
-    draw(nsize);
+    draw(parsedNewSize);
 }
