@@ -35,7 +35,7 @@ function draw(n) {
     container.style.gridTemplateColumns = 'repeat(' + size + ', 1fr)';
     container.style.gridAutoColumns = boxWidth/size + 'px';
     container.style.gridAutoRows = boxWidth/size + 'px';
-    for(let i = 0; i < size*size; i++) {
+    for(let i = 0; i <= size*size; i++) {
         let element = document.createElement('div');
         element.textContent = '';
         element.onmouseenter = function() {
